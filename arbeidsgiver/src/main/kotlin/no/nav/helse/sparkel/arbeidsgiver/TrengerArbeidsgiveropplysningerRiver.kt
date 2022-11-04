@@ -29,7 +29,7 @@ internal class TrengerArbeidsgiveropplysningerRiver(
             validate { it.require("@opprettet", JsonNode::asLocalDateTime) }
             validate { it.require("fom", JsonNode::asLocalDate) }
             validate { it.require("tom", JsonNode::asLocalDate) }
-            validate { it.requireKey("organisasjonsnummer", "fødselsnummer") }
+            validate { it.requireKey("organisasjonsnummer", "fødselsnummer", "vedtaksperiodeId", "forespurteOpplysninger") }
         }.register(this)
     }
 
